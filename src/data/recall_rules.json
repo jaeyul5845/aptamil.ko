@@ -1,0 +1,68 @@
+[
+  {
+    "id": "rule-kr-official-001",
+    "country": "KR",
+    "product_tags": ["1"],
+    "mhd_from": "2025-01-01",
+    "mhd_to": "2025-12-31",
+    "lot_patterns": ["^KR25A"],
+    "required_evidence_tiers": ["OFFICIAL_GOV", "OFFICIAL_MANUFACTURER"],
+    "sources": [
+      {
+        "source_id": "gov-kr-food",
+        "url": "https://example.com/gov/food/recall-kr-001",
+        "source_tier": "OFFICIAL_GOV",
+        "last_checked": "2025-12-20"
+      }
+    ]
+  },
+  {
+    "id": "rule-kr-manufacturer-002",
+    "country": "KR",
+    "product_tags": ["PROFUTURA"],
+    "mhd_from": "2025-06-01",
+    "mhd_to": "2026-01-31",
+    "lot_patterns": ["^PF-"],
+    "required_evidence_tiers": ["OFFICIAL_MANUFACTURER"],
+    "sources": [
+      {
+        "source_id": "aptamil-kr",
+        "url": "https://example.com/aptamil/kr/notice-005",
+        "source_tier": "OFFICIAL_MANUFACTURER",
+        "last_checked": "2025-12-18"
+      }
+    ]
+  },
+  {
+    "id": "rule-kr-media-003",
+    "country": "KR",
+    "product_tags": ["COMFORT"],
+    "mhd_from": "2024-01-01",
+    "mhd_to": "2024-12-31",
+    "lot_patterns": ["^CF-"],
+    "required_evidence_tiers": ["REPUTABLE_MEDIA"],
+    "sources": [
+      {
+        "source_id": "media-kr",
+        "url": "https://example.com/media/report-301",
+        "source_tier": "REPUTABLE_MEDIA",
+        "last_checked": "2025-08-20"
+      }
+    ]
+  },
+  {
+    "id": "rule-kr-community-004",
+    "country": "KR",
+    "product_tags": ["AR"],
+    "lot_patterns": ["^AR-"],
+    "required_evidence_tiers": ["COMMUNITY_RUMOR"],
+    "sources": [
+      {
+        "source_id": "community-forum",
+        "url": "https://example.com/forum/thread-140",
+        "source_tier": "COMMUNITY_RUMOR",
+        "last_checked": "2025-06-05"
+      }
+    ]
+  }
+]

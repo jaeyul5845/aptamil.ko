@@ -1,0 +1,96 @@
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at top left, #f1f5f9, #ffffff 50%, #e2e8f0 100%);
+  color: #0f172a;
+}
+
+.site-header {
+  padding: 2rem 6vw 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand-mark {
+  width: 50px;
+  height: 50px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #0f766e, #22c55e);
+  color: #ecfeff;
+  font-weight: 700;
+  font-size: 1.6rem;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 24px rgba(15, 118, 110, 0.25);
+}
+
+.brand-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.brand-subtitle {
+  margin: 0.25rem 0 0;
+  color: #475569;
+  font-size: 0.92rem;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  font-weight: 600;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: #0f172a;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  transition: all 0.2s ease;
+}
+
+.site-nav a.active {
+  background: #0f766e;
+  color: #ecfeff;
+  border-color: transparent;
+}
+
+.site-main {
+  flex: 1;
+  padding: 2.5rem 6vw 3.5rem;
+}
+
+.site-footer {
+  padding: 2rem 6vw 2.5rem;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  color: #475569;
+  font-size: 0.9rem;
+  display: grid;
+  gap: 0.4rem;
+}
+
+@media (max-width: 720px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-main {
+    padding: 2rem 5vw 3rem;
+  }
+}

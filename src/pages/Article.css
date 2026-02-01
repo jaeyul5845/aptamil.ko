@@ -1,0 +1,45 @@
+.article-hero {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.article-header-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.article-body {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+  line-height: 1.7;
+}
+
+.article-body h1,
+.article-body h2,
+.article-body h3 {
+  margin-top: 1.5rem;
+}
+
+.article-body ul {
+  padding-left: 1.2rem;
+}
+
+.article-section {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.source-list {
+  padding-left: 1.2rem;
+}
+
+.article-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}

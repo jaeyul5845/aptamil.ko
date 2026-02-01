@@ -1,0 +1,13 @@
+.data-error {
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  padding: 1.5rem;
+  border-radius: 16px;
+  color: #7f1d1d;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.data-error ul {
+  padding-left: 1.2rem;
+}

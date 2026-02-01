@@ -1,0 +1,58 @@
+.credibility-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  font-weight: 600;
+}
+
+.tier {
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  background: #e2e8f0;
+}
+
+.tier-official_gov {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.tier-official_manufacturer {
+  background: #cffafe;
+  color: #155e75;
+}
+
+.tier-official_retailer {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+.tier-reputable_media {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.tier-community_rumor,
+.tier-unknown {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.label {
+  font-size: 0.9rem;
+}
+
+.score {
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+.warning-badge {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}

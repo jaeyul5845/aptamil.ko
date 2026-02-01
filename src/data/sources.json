@@ -1,0 +1,52 @@
+[
+  {
+    "id": "gov-kr-food",
+    "name": "식품안전 공지(예시)",
+    "country": "KR",
+    "type": "정부",
+    "source_tier": "OFFICIAL_GOV",
+    "base_url": "https://example.com/gov/food",
+    "why_this_tier": "정부 공식 공지 채널(예시)",
+    "last_checked": "2025-12-20"
+  },
+  {
+    "id": "aptamil-kr",
+    "name": "Aptamil Korea 공식 안내(예시)",
+    "country": "KR",
+    "type": "제조사",
+    "source_tier": "OFFICIAL_MANUFACTURER",
+    "base_url": "https://example.com/aptamil/kr",
+    "why_this_tier": "제조사 공식 안내 페이지(예시)",
+    "last_checked": "2025-12-18"
+  },
+  {
+    "id": "retailer-kr",
+    "name": "국내 유통사 공지(예시)",
+    "country": "KR",
+    "type": "유통사",
+    "source_tier": "OFFICIAL_RETAILER",
+    "base_url": "https://example.com/retailer/notice",
+    "why_this_tier": "공식 유통사 공지 채널(예시)",
+    "last_checked": "2025-11-30"
+  },
+  {
+    "id": "media-kr",
+    "name": "국내 언론 보도(예시)",
+    "country": "KR",
+    "type": "언론",
+    "source_tier": "REPUTABLE_MEDIA",
+    "base_url": "https://example.com/media",
+    "why_this_tier": "주요 언론 보도(예시)",
+    "last_checked": "2025-10-28"
+  },
+  {
+    "id": "community-forum",
+    "name": "커뮤니티 게시판(예시)",
+    "country": "KR",
+    "type": "커뮤니티",
+    "source_tier": "COMMUNITY_RUMOR",
+    "base_url": "https://example.com/forum",
+    "why_this_tier": "비공식 사용자 게시글(예시)",
+    "last_checked": "2025-10-01"
+  }
+]

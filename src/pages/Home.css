@@ -1,0 +1,53 @@
+.hero-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+  padding: 2rem;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.1);
+  display: grid;
+  gap: 1rem;
+}
+
+.form-grid {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.form-grid label {
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+.form-grid input,
+.form-grid select {
+  padding: 0.7rem 0.9rem;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  font-size: 1rem;
+}
+
+.checker-result {
+  background: rgba(15, 118, 110, 0.08);
+  padding: 1rem;
+  border-radius: 16px;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.result-title {
+  font-weight: 700;
+}
+
+.match-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.match-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 0.75rem;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}

@@ -1,73 +1,68 @@
-# React + TypeScript + Vite
+# Aptamil Recall Korea Archive
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Static MVP built with React + Vite + TypeScript. Cloudflare Pages compatible (no backend).
 
-Currently, two official plugins are available:
+## Features
+- Archive with source credibility labeling
+- Recall Checker against local JSON rules
+- Article detail pages with credibility tier/score and sources
+- Updates (changelog) page
+- SEO-ready meta tags, sitemap, and robots.txt
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project structure
+- `src/data/` – JSON datasets (archive, sources, recall rules, updates)
+- `src/content/articles/` – markdown bodies per archive item
+- `src/pages/` – route pages
 
-## React Compiler
+## How credibility works
+Source tier → score mapping:
+- OFFICIAL_GOV: 95
+- OFFICIAL_MANUFACTURER: 90
+- OFFICIAL_RETAILER: 80
+- REPUTABLE_MEDIA: 65
+- COMMUNITY_RUMOR: 25
+- UNKNOWN: 10
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Score → label (Korean):
+- 90–100: 공식(매우 높음)
+- 70–89: 준공식/신뢰 높음
+- 50–69: 언론/참고(중간)
+- 0–49: 카더라/미확인(낮음)
 
-## Expanding the ESLint configuration
+## Add a new article
+1. Create a markdown file in `src/content/articles/`.
+2. Add an entry in `src/data/archive.json` with:
+   - `slug` (URL-safe)
+   - `content_md` pointing to the markdown path (e.g., `articles/2026-01-example.md`)
+3. Ensure `sources` include URLs and `last_checked` dates.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Add a new source
+1. Add a new entry in `src/data/sources.json`.
+2. Reference the `source_id` from archive items or recall rules.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Recall checker rules
+Rules live in `src/data/recall_rules.json`. They are placeholders and must be replaced with verified data. The checker only returns “included” when OFFICIAL_GOV or OFFICIAL_MANUFACTURER evidence is present.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Development
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Build
+```bash
+npm run build
 ```
+
+## Tests
+```bash
+npm run test
+```
+
+## Cloudflare Pages
+- Build command: `npm run build`
+- Output directory: `dist`
+
+## Notes
+- `public/sitemap.xml` uses placeholder domain. Replace `https://example.com` with your real domain.
+- All sample data is placeholder only.
